@@ -11,6 +11,9 @@ jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website  # 设置默认工作目录
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,16 +22,18 @@ jobs:
         with:
           node-version: 22
           cache: yarn
+          cache-dependency-path: website/yarn.lock  # 指定 yarn.lock 的路径
 
       - name: Install dependencies
-        run: cd website && yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile
+
       - name: Build website
-        run: cd website && yarn build
+        run: yarn build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website/build
+          path: website/build  # 构建输出路径
 
   deploy:
     name: Deploy to GitHub Pages
