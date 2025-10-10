@@ -21,9 +21,9 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: cd website && yarn install --frozen-lockfile
       - name: Build website
-        run: yarn build
+        run: cd website && yarn build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
