@@ -16,7 +16,7 @@ const sidebars: SidebarsConfig = {
         description: 'Learn how to install AI-Terminal on your system.',
       },
       items: [
-        'installation/quick-start',
+        // 'installation/quick-start',
         'installation/system-requirements',
         'installation/advanced-installation',
       ],
@@ -31,11 +31,11 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'usage/basic-commands',
-        'usage/interactive-coding',
-        'usage/smart-commits',
-        'usage/command-execution',
-        'usage/context-management',
-        'usage/session-management',
+        // 'usage/interactive-coding',
+        // 'usage/smart-commits',
+        // 'usage/command-execution',
+        // 'usage/context-management',
+        // 'usage/session-management',
       ],
     },
     {
@@ -48,25 +48,25 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'configuration/basic-configuration',
-        'configuration/model-settings',
-        'configuration/advanced-settings',
+        // 'configuration/model-settings',
+        // 'configuration/advanced-settings',
       ],
     },
-    {
-      type: 'category',
-      label: 'Examples',
-      link: {
-        type: 'generated-index',
-        title: 'Examples and Use Cases',
-        description: 'Practical examples and real-world use cases for AI-Terminal.',
-      },
-      items: [
-        'examples/common-workflows',
-        'examples/code-generation',
-        'examples/git-integration',
-        'examples/debugging-assistance',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Examples',
+    //   link: {
+    //     type: 'generated-index',
+    //     title: 'Examples and Use Cases',
+    //     description: 'Practical examples and real-world use cases for AI-Terminal.',
+    //   },
+    //   items: [
+    //     'examples/common-workflows',
+    //     'examples/code-generation',
+    //     'examples/git-integration',
+    //     'examples/debugging-assistance',
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Troubleshooting',
@@ -77,20 +77,20 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'troubleshooting/common-errors',
-        'troubleshooting/performance-issues',
-        'troubleshooting/connectivity-problems',
+        // 'troubleshooting/performance-issues',
+        // 'troubleshooting/connectivity-problems',
       ],
     },
-    {
-      type: 'doc',
-      id: 'faq',
-      label: 'FAQ',
-    },
-    {
-      type: 'doc',
-      id: 'changelog',
-      label: 'Changelog',
-    },
+    // {
+    //   type: 'doc',
+    //   id: 'faq',
+    //   label: 'FAQ',
+    // },
+    // {
+    //   type: 'doc',
+    //   id: 'changelog',
+    //   label: 'Changelog',
+    // },
   ],
 };
 
