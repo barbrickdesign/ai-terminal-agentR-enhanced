@@ -347,6 +347,11 @@ func (c *CommandExecutor) remove(_ context.Context, input string) error {
 		}
 	}
 
+	// Check if any files were actually removed
+	if deleteCount == 0 {
+		return errbook.New("No matching files found to remove")
+	}
+
 	return nil
 }
 
