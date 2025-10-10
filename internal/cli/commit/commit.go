@@ -244,20 +244,6 @@ func (o *Options) executeAttributedCommit(g *git.Command, finalCommitMessage str
 	authorName, authorEmail := o.cfg.GetCommitAuthor()
 	committerName, committerEmail := o.cfg.GetCommitAuthor()
 
-	// Check if author information is empty
-	if authorName == "" || authorEmail == "" {
-		useAttributeAuthor = false
-	}
-	// Check if committer information is empty
-	if committerName == "" || committerEmail == "" {
-		useAttributeCommitter = false
-	}
-
-	// If both are empty, fall back to standard commit
-	if !useAttributeAuthor && !useAttributeCommitter {
-		return o.executeStandardCommit(g, finalCommitMessage)
-	}
-
 	// Add model information to names if needed
 	if useAttributeAuthor && o.cfg.CurrentModel.Name != "" {
 		authorName = fmt.Sprintf("%s (%s)", authorName, o.cfg.CurrentModel.Name)
