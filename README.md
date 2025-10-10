@@ -2,92 +2,174 @@
 
 [🇺🇸 English](./README.md) | [🇨🇳 中文](./README_zh.md) | [🇯🇵 日本語](./README_ja.md)
 
-AI-Terminal is an AI-powered command-line interface that enhances terminal workflows through intelligent automation and optimization.
+> Your intelligent command-line companion that transforms terminal workflows with AI-powered automation
 
-## Features
+AI-Terminal is an advanced command-line interface enhanced with artificial intelligence to help developers work smarter, not harder. It provides context-aware assistance, intelligent automation, and powerful code generation capabilities right in your terminal.
 
-- **Smart Assistance:** Context-aware command suggestions and completions
-- **Task Automation:** Automate repetitive tasks with AI-generated shortcuts
-- **Intelligent Search:** Advanced file and content search capabilities
-- **Error Handling:** Command correction and alternative suggestions
-- **Extensible:** Plugin system for custom integrations
+## ✨ Key Features
 
-## Quick Start
+### 🤖 Interactive Coding Sessions
+- **Multi-mode Interface**: Switch between chat (`/ask`), coding (`/coding`), and execution (`/exec`) modes
+- **File Context Management**: Load files with `/add` command for context-aware operations
+- **Real-time Code Editing**: Apply AI-generated code changes directly to your files
+- **Auto-commit Integration**: Automatically commit changes after code generation
+
+### 📝 Intelligent Commit Automation
+- **Multi-stage Analysis**: Code review → Title generation → Prefix determination → Message creation
+- **Language Support**: Generate commit messages in English, Chinese, Japanese, Portuguese, and Brazilian Portuguese
+- **Conventional Commits**: Automatic prefix detection (feat, fix, docs, style, refactor, test, chore)
+- **Flexible Attribution**: Configurable author/committer attribution for AI-generated changes
+
+### 🔧 Smart Command Execution
+- **OS-Aware Suggestions**: Commands tailored to your operating system and architecture
+- **Safety First**: Built-in confirmation prompts and `[noexec]` responses for unsafe operations
+- **Context Integration**: Leverages current user, OS info, and directory context
+
+### 💬 Advanced File & Context Management
+- **Pattern Matching**: Support for glob patterns and directory recursion
+- **Remote Content**: Load and analyze content from URLs
+- **Session Persistence**: Save and restore conversation contexts across sessions
+- **Batch Operations**: Process multiple files and directories efficiently
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Go 1.22.0 or later
+- **Go 1.22.0 or later** (if building from source)
+- **Git** installed and configured
+- Terminal/Command Prompt access
+- API access to supported AI providers
 
 ### Installation
 
-**Homebrew:**
+**Homebrew (Recommended):**
 ```bash
 brew install coding-hui/tap/ai-terminal
 ```
 
-**Download:**
-- [Packages][releases] (Debian/RPM formats)
-- [Binaries][releases] (Linux/macOS/Windows)
+**Download Pre-built Binaries:**
+Visit our [releases page][releases] to download binaries for:
+- Linux (x86_64, arm64)
+- macOS (Intel, Apple Silicon) 
+- Windows
 
-[releases]: https://github.com/coding-hui/ai-terminal/releases
-
-**From Source:**
+**Build from Source:**
 ```bash
+git clone https://github.com/coding-hui/ai-terminal.git
+cd ai-terminal
 make build
 ```
 
-**Initialize:**
+### Initial Configuration
+
 ```bash
 ai configure
 ```
 
-### Shell Completions
+This interactive setup will guide you through API key configuration and personal preferences.
 
-Completion files are included for Bash, ZSH, Fish, and PowerShell. Generate manually with:
+## 📖 Usage Examples
+
+### Interactive Coding Session
 ```bash
-ai completion [bash|zsh|fish|powershell] -h
-```
-
-## Usage Examples
-
-### Chat & Assistance
-```bash
-ai ask "How to optimize Docker performance?"
-ai ask --file prompt.txt
-echo "code content" | ai ask "analyze this code"
-```
-
-### Code Generation
-```bash
-# Interactive mode
+# Start interactive coding
 ai coder
 
-# Batch processing
-ai ctx load context.txt
-ai coder -c session_id -p "add error handling"
+# In the session:
+/add *.go                    # Add all Go files
+/add https://example.com/api-spec.json  # Add remote content
+/coding "Refactor these functions to use interfaces"
+/commit                     # Auto-commit the changes
 ```
 
-### Code Review
+### Smart Commit Messages
 ```bash
-ai review --exclude-list "*.md,*.txt"
+# Stage your changes
+git add .
+
+# Generate commit with specific language and prefix
+ai commit --lang zh-cn --prefix fix
+
+# Preview before committing
+ai commit --preview --no-confirm
+
+# Amend previous commit
+ai commit --amend
 ```
 
-### Command Execution
+### Command Assistance & Execution
 ```bash
-ai exec "find large files from last week"
-ai exec --yes "docker ps -a"
-ai exec --interactive
+# Get command suggestions
+ai exec "find all recently modified Go files and count lines"
+
+# Execute with auto-confirmation
+ai exec --yes "list all Docker containers and their status"
+
+# Safe rejection for destructive operations
+ai exec "rm -rf /"  # Returns [noexec] with reason
 ```
 
-### Commit Messages
+### File Analysis & Q&A
 ```bash
-ai commit --diff-unified 3 --lang en
+# Load files and ask questions
+ai coder
+/add package.json
+/add src/
+/ask "What dependencies are outdated and what are the alternatives?"
 ```
 
-## Contributing
+### Design & Architecture
+```bash
+ai coder
+/add current-architecture.md
+/design "Design a microservices architecture for this monolith"
+```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## ⚙️ Configuration
 
-**Changelog:** [CHANGELOG.md](CHANGELOG.md)  
-**License:** [MIT](LICENSE) © 2024 coding-hui
+### API Setup
+Configure multiple AI providers in your config file:
+```yaml
+apis:
+  openai:
+    api-key: sk-...
+    base-url: https://api.openai.com/v1
+  localai:
+    api-key: ""
+    base-url: http://localhost:8080/v1
+```
+
+### Auto-coder Settings
+```yaml
+auto-coder:
+  coding-model: gpt-4
+  design-model: gpt-4
+  auto-commit: true
+  commit-prefix: feat
+  coding-fences: ["```", "```"]
+```
+
+## 🏗️ Advanced Features
+
+### Session Management
+```bash
+# Save current context
+/save session-name
+
+# List available sessions
+/sessions
+
+# Clear current conversation
+/clear
+```
+
+### Diff and Apply Operations
+```bash
+# View formatted diffs
+/diff
+
+# Apply edit blocks directly
+/apply "
+<<<<<<< SEARCH
+old code
 

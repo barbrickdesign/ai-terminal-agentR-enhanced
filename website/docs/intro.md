@@ -2,46 +2,101 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# AI-Terminal Documentation
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the official documentation for **AI-Terminal** - your intelligent command-line companion that brings AI-powered assistance directly to your terminal.
 
-## Getting Started
+## What is AI-Terminal?
 
-Get started by **creating a new site**.
+AI-Terminal is an advanced command-line interface enhanced with artificial intelligence to transform your development workflow. It integrates AI capabilities directly into your terminal, providing intelligent code generation, automated commit messages, smart command execution, and contextual assistance.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Core Capabilities
 
-### What you'll need
+### 🤖 Interactive Coding Sessions
+- **Multi-mode Interface**: Switch between chat (`/ask`), coding (`/coding`), and execution (`/exec`) modes
+- **File Context Management**: Load files with `/add` command for context-aware operations
+- **Real-time Code Editing**: Apply AI-generated code changes directly to your files
+- **Auto-commit Integration**: Automatically commit changes after code generation
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### 📝 Intelligent Commit Automation
+- **Multi-stage Analysis**: Code review → Title generation → Prefix determination → Message creation
+- **Language Support**: Generate commit messages in English, Chinese, Japanese, Portuguese, and Brazilian Portuguese
+- **Conventional Commits**: Automatic prefix detection (feat, fix, docs, style, refactor, test, chore)
+- **Flexible Attribution**: Configurable author/committer attribution for AI-generated changes
 
-## Generate a new site
+### 🔧 Smart Command Execution
+- **OS-Aware Suggestions**: Commands tailored to your operating system and architecture
+- **Safety First**: Built-in confirmation prompts and `[noexec]` responses for unsafe operations
+- **Context Integration**: Leverages current user, OS info, and directory context
 
-Generate a new Docusaurus site using the **classic template**.
+### 💬 Advanced File & Context Management
+- **Pattern Matching**: Support for glob patterns and directory recursion
+- **Remote Content**: Load and analyze content from URLs
+- **Session Persistence**: Save and restore conversation contexts across sessions
+- **Batch Operations**: Process multiple files and directories efficiently
 
-The classic template will automatically be added to your project after you run the command:
+## Quick Start
 
+### Installation
+
+**Homebrew (Recommended):**
 ```bash
-npm init docusaurus@latest my-website classic
+brew install coding-hui/tap/ai-terminal
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+**Download Pre-built Binaries:**
+Visit our [releases page](https://github.com/coding-hui/ai-terminal/releases) to download binaries for your platform.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
+**Build from Source:**
 ```bash
-cd my-website
-npm run start
+git clone https://github.com/coding-hui/ai-terminal.git
+cd ai-terminal
+make build
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### Initial Configuration
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```bash
+ai configure
+```
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+This interactive setup will guide you through:
+- API key configuration for your preferred AI provider
+- Model selection and preferences
+- Git integration settings
+- Auto-commit and attribution preferences
+
+### First Steps
+
+1. **Start Interactive Coding:**
+   ```bash
+   ai coder
+   ```
+
+2. **Add Files to Context:**
+   ```bash
+   /add main.go
+   /add *.ts
+   ```
+
+3. **Generate Code:**
+   ```bash
+   /coding "Add error handling to this function"
+   ```
+
+4. **Commit Changes:**
+   ```bash
+   /commit
+   ```
+
+## Explore More
+
+- [Getting Started Guide](./basic-usage/getting-started) - Learn the fundamentals
+- [Configuration Guide](./configuration) - Customize your setup
+- [Command Reference](./category/command-reference) - Complete command documentation
+
+## Need Help?
+
+- **Community**: Join [GitHub Discussions](https://github.com/coding-hui/ai-terminal/discussions)
+- **Issues**: Report bugs on [GitHub Issues](https://github.com/cai-terminal/issues)
+- **Contributing**: Check out our [Contributing Guide](https://github.com/coding-hui/ai-terminal/blob/main/CONTRIBUTING.md)
