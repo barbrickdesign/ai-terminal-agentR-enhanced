@@ -11,32 +11,33 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Intelligent Code Generation',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Generate high-quality code from natural language descriptions. 
+        Our AI understands your intent and produces production-ready code 
+        across multiple programming languages.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Context-Aware Refactoring',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Automatically refactor and improve your codebase with AI that understands 
+        your project's architecture and coding standards.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Automated Development Workflows',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Streamline your development process with automated testing, documentation, 
+        and deployment assistance powered by intelligent AI agents.
       </>
     ),
   },
