@@ -16,7 +16,7 @@ const sidebars: SidebarsConfig = {
         description: 'Learn how to install AI-Terminal on your system.',
       },
       items: [
-        // 'installation/quick-start',
+        'installation/quick-start',
         'installation/system-requirements',
         'installation/advanced-installation',
       ],
