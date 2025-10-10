@@ -93,10 +93,9 @@ This interactive setup will guide you through:
 
 - [Getting Started Guide](./basic-usage/getting-started) - Learn the fundamentals
 - [Configuration Guide](./configuration) - Customize your setup
-- [Command Reference](./category/command-reference) - Complete command documentation
 
 ## Need Help?
 
 - **Community**: Join [GitHub Discussions](https://github.com/coding-hui/ai-terminal/discussions)
-- **Issues**: Report bugs on [GitHub Issues](https://github.com/cai-terminal/issues)
+- **Issues**: Report bugs on [GitHub Issues](https://github.com/coding-hui/ai-terminal/issues)
 - **Contributing**: Check out our [Contributing Guide](https://github.com/coding-hui/ai-terminal/blob/main/CONTRIBUTING.md)
