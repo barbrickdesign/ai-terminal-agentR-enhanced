@@ -57,7 +57,7 @@ make build
 ### Initial Setup
 
 ```bash
-ai configure
+ai-terminal configure
 ```
 
 This interactive setup will guide you through:
@@ -70,7 +70,7 @@ This interactive setup will guide you through:
 
 1. **Launch Interactive Coding:**
    ```bash
-   ai coder
+   ai-terminal coder
    ```
 
 2. **Add Files to Context:**
