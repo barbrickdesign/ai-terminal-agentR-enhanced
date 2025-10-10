@@ -89,9 +89,9 @@ datastore:
   cache-path: ~/.local/share/ai-terminal/cache
 ```
 
-## Key Configuration Sections
+## Configuration Sections
 
-### API Configuration
+### API Provider Setup
 Configure multiple AI providers and their models:
 
 ```yaml
@@ -116,7 +116,7 @@ apis:
     base-url: http://localhost:8080/v1
 ```
 
-### Auto-coder Settings
+### Auto-coder Configuration
 Fine-tune the coding assistant behavior:
 
 ```yaml
@@ -140,7 +140,7 @@ auto-coder:
   attribute-co-authored-by: false
 ```
 
-### Model-specific Settings
+### Model-specific Configuration
 Configure behavior for specific models:
 
 ```yaml
@@ -156,7 +156,7 @@ apis:
         temperature: 0.5
 ```
 
-## Environment-based API Keys
+## Security & API Keys
 
 For enhanced security, you can use environment variables or command-based API key retrieval:
 
@@ -168,9 +168,9 @@ apis:
     api-key-cmd: "pass show openai/api-key"
 ```
 
-## Common Configuration Examples
+## Configuration Examples
 
-### Development Setup
+### Development Environment Setup
 ```yaml
 default-model: gpt-4
 default-api: openai
@@ -181,7 +181,7 @@ auto-coder:
   commit-prefix: feat
 ```
 
-### Conservative Setup (Cost-aware)
+### Cost-Optimized Setup
 ```yaml
 default-model: gpt-3.5-turbo
 temp: 0.3
@@ -190,7 +190,7 @@ auto-coder:
   auto-commit: false  # Manual review before committing
 ```
 
-### Local AI Setup
+### Local AI Deployment
 ```yaml
 default-model: local-model
 default-api: localai
@@ -199,7 +199,7 @@ apis:
     base-url: http://localhost:8080/v1
 ```
 
-## Verifying Configuration
+## Configuration Verification
 
 Check your current configuration:
 ```bash
@@ -211,11 +211,11 @@ Test your configuration with a simple query:
 ai ask "test configuration"
 ```
 
-## Troubleshooting Configuration Issues
+## Troubleshooting
 
-### Common Issues
+### Common Configuration Issues
 
-1. **API Key Problems**
+1. **API Key Validation**
    ```bash
    # Check if API key is set
    echo $OPENAI_API_KEY
@@ -230,7 +230,7 @@ ai ask "test configuration"
    ai config show --path
    ```
 
-3. **Reset to Defaults**
+3. **Reset Configuration**
    ```bash
    # Backup current config
    cp ~/.config/ai-terminal/config.yml ~/.config/ai-terminal/config.yml.backup
@@ -239,4 +239,4 @@ ai ask "test configuration"
    ai config reset
    ```
 
-For more help, visit our [Troubleshooting Guide](../troubleshooting) or [GitHub Discussions](https://github.com/coding-hui/ai-terminal/discussions).
+For additional support, visit our [Troubleshooting Guide](../troubleshooting) or [GitHub Discussions](https://github.com/coding-hui/ai-terminal/discussions).

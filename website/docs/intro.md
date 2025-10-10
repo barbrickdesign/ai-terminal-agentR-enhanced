@@ -6,36 +6,36 @@ sidebar_position: 1
 
 Welcome to the official documentation for **AI-Terminal** - your intelligent command-line companion that brings AI-powered assistance directly to your terminal.
 
-## What is AI-Terminal?
+## Overview
 
 AI-Terminal is an advanced command-line interface enhanced with artificial intelligence to transform your development workflow. It integrates AI capabilities directly into your terminal, providing intelligent code generation, automated commit messages, smart command execution, and contextual assistance.
 
-## Core Capabilities
+## Key Features
 
-### 🤖 Interactive Coding Sessions
+### 🤖 Interactive Coding
 - **Multi-mode Interface**: Switch between chat (`/ask`), coding (`/coding`), and execution (`/exec`) modes
 - **File Context Management**: Load files with `/add` command for context-aware operations
 - **Real-time Code Editing**: Apply AI-generated code changes directly to your files
 - **Auto-commit Integration**: Automatically commit changes after code generation
 
-### 📝 Intelligent Commit Automation
+### 📝 Smart Commit Messages
 - **Multi-stage Analysis**: Code review → Title generation → Prefix determination → Message creation
 - **Language Support**: Generate commit messages in English, Chinese, Japanese, Portuguese, and Brazilian Portuguese
 - **Conventional Commits**: Automatic prefix detection (feat, fix, docs, style, refactor, test, chore)
 - **Flexible Attribution**: Configurable author/committer attribution for AI-generated changes
 
-### 🔧 Smart Command Execution
+### 🔧 Intelligent Command Execution
 - **OS-Aware Suggestions**: Commands tailored to your operating system and architecture
 - **Safety First**: Built-in confirmation prompts and `[noexec]` responses for unsafe operations
 - **Context Integration**: Leverages current user, OS info, and directory context
 
-### 💬 Advanced File & Context Management
+### 💬 Advanced Context Management
 - **Pattern Matching**: Support for glob patterns and directory recursion
 - **Remote Content**: Load and analyze content from URLs
 - **Session Persistence**: Save and restore conversation contexts across sessions
 - **Batch Operations**: Process multiple files and directories efficiently
 
-## Quick Start
+## Getting Started
 
 ### Installation
 
@@ -54,7 +54,7 @@ cd ai-terminal
 make build
 ```
 
-### Initial Configuration
+### Initial Setup
 
 ```bash
 ai configure
@@ -66,9 +66,9 @@ This interactive setup will guide you through:
 - Git integration settings
 - Auto-commit and attribution preferences
 
-### First Steps
+### Quick Start Guide
 
-1. **Start Interactive Coding:**
+1. **Launch Interactive Coding:**
    ```bash
    ai coder
    ```
@@ -89,13 +89,13 @@ This interactive setup will guide you through:
    /commit
    ```
 
-## Explore More
+## Documentation Structure
 
 - [Getting Started Guide](./basic-usage/getting-started) - Learn the fundamentals
 - [Configuration Guide](./configuration) - Customize your setup
 
-## Need Help?
+## Support & Community
 
-- **Community**: Join [GitHub Discussions](https://github.com/coding-hui/ai-terminal/discussions)
-- **Issues**: Report bugs on [GitHub Issues](https://github.com/coding-hui/ai-terminal/issues)
+- **Community Support**: Join [GitHub Discussions](https://github.com/coding-hui/ai-terminal/discussions)
+- **Issue Reporting**: Report bugs on [GitHub Issues](https://github.com/coding-hui/ai-terminal/issues)
 - **Contributing**: Check out our [Contributing Guide](https://github.com/coding-hui/ai-terminal/blob/main/CONTRIBUTING.md)

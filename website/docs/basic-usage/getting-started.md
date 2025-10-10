@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Getting Started with AI-Terminal
+# Getting Started Guide
 
-This guide will help you get up and running with AI-Terminal's core features.
+This guide will help you get up and running with AI-Terminal's core features quickly and efficiently.
 
 ## Installation & Setup
 
@@ -29,9 +29,9 @@ This will guide you through:
 - Configuring git integration
 - Setting up auto-commit preferences
 
-## Core Commands Overview
+## Core Features Overview
 
-### Interactive Coding Session
+### Interactive Coding Environment
 The most powerful feature of AI-Terminal is the interactive coding session:
 
 ```bash
@@ -40,7 +40,7 @@ ai coder
 
 Once in the interactive session, you can use various commands:
 
-#### Loading Files
+#### Managing File Context
 ```bash
 /add main.go                    # Add a single file
 /add *.ts                       # Add all TypeScript files
@@ -48,26 +48,26 @@ Once in the interactive session, you can use various commands:
 /add https://example.com/spec.json  # Add remote content
 ```
 
-#### Code Generation & Editing
+#### Code Generation & Modification
 ```bash
 /coding "Add error handling to this function"
 /coding "Refactor this to use async/await"
 /coding "Write unit tests for this module"
 ```
 
-#### Asking Questions
+#### Code Analysis & Q&A
 ```bash
 /ask "How does this authentication system work?"
 /ask "What improvements can be made to this code?"
 ```
 
-#### Design Assistance
+#### Architecture & Design
 ```bash
 /design "Design a REST API for this feature"
 /design "Create a database schema for user management"
 ```
 
-### Smart Commit Messages
+### Automated Commit Messages
 Generate meaningful commit messages from your staged changes:
 
 ```bash
@@ -84,7 +84,7 @@ ai commit --lang zh-cn --prefix feat
 ai commit --preview
 ```
 
-### Command Execution
+### Natural Language Command Execution
 Convert natural language to shell commands:
 
 ```bash
@@ -98,9 +98,9 @@ ai exec --yes "list all running Docker containers"
 ai exec "delete all files"  # Returns [noexec] for safety
 ```
 
-## Common Workflows
+## Common Development Workflows
 
-### Feature Development Workflow
+### Feature Development Process
 ```bash
 # 1. Start coding session
 ai coder
@@ -119,7 +119,7 @@ ai coder
 /commit
 ```
 
-### Code Review Workflow
+### Code Review Process
 ```bash
 # 1. Stage changes for review
 git add .
@@ -135,7 +135,7 @@ ai commit --preview --no-confirm
 # - Full commit message
 ```
 
-### Learning & Exploration
+### Learning & Codebase Exploration
 ```bash
 # Load a codebase and ask questions
 ai coder
@@ -144,14 +144,14 @@ ai coder
 /ask "How can I add logging to this service?"
 ```
 
-## Tips for Best Results
+## Best Practices
 
-### Effective Prompting
+### Effective Prompt Engineering
 - **Be Specific**: Instead of "fix this", use "add null checks to handle edge cases"
 - **Provide Context**: Load relevant files before asking questions
 - **Iterate**: Build on previous responses with follow-up questions
 
-### File Management
+### File Management Strategies
 - **Start Small**: Add a few key files first, then expand as needed
 - **Use Patterns**: Leverage glob patterns (`*.go`, `**/*.test.js`)
 - **Remote Resources**: Load API specs, documentation, or examples from URLs
@@ -166,4 +166,4 @@ ai coder
 Now that you understand the basics, explore:
 - [Advanced Features](../category/advanced-features) for power-user capabilities
 - [Configuration Guide](../configuration) to customize your setup
-- [Troubleshooting](../troubleshooting) for common issues and solutions
+- [Troubleshooting Guide](../troubleshooting) for common issues and solutions
