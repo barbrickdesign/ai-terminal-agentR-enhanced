@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   build:
@@ -13,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: website  # 设置默认工作目录
+        working-directory: website
     steps:
       - uses: actions/checkout@v4
         with:
@@ -22,7 +20,7 @@ jobs:
         with:
           node-version: 22
           cache: yarn
-          cache-dependency-path: website/yarn.lock  # 指定 yarn.lock 的路径
+          cache-dependency-path: website/yarn.lock
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -33,22 +31,17 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website/build  # 构建输出路径
+          path: website/build
 
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
