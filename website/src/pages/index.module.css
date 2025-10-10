@@ -10,14 +10,136 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.statIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.gettingStarted {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.codeBlock {
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.codeBlock pre {
+  margin: 0;
+  background: none;
+}
+
+.wantMore {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-weight: bold;
+}
+
+.testimonials {
+  padding: 4rem 0;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.875rem;
+}
+
+.moreInfo {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.moreInfo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.moreInfo li {
+  margin-bottom: 0.5rem;
+}
+
+.moreInfo p {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+  
+  .stats {
+    gap: 1rem;
+  }
+  
+  .stat {
+    min-width: 80px;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
 }
