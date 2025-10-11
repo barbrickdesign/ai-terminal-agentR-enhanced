@@ -19,7 +19,6 @@ const sidebars: SidebarsConfig = {
         'installation/system-requirements',
         'installation/advanced-installation',
         'configuration/basic-configuration',
-        // Add other configuration items directly here if needed
       ],
     },
     {
@@ -32,28 +31,8 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'usage/basic-commands',
-        // 'usage/interactive-coding',
-        // 'usage/smart-commits',
-        // 'usage/command-execution',
-        // 'usage/context-management',
-        // 'usage/session-management',
       ],
     },
-    // {
-    //   type: 'category',
-    //   label: 'Examples',
-    //   link: {
-    //     type: 'generated-index',
-    //     title: 'Examples and Use Cases',
-    //     description: 'Practical examples and real-world use cases for AI-Terminal.',
-    //   },
-    //   items: [
-    //     'examples/common-workflows',
-    //     'examples/code-generation',
-    //     'examples/git-integration',
-    //     'examples/debugging-assistance',
-    //   ],
-    // },
     {
       type: 'category',
       label: 'Troubleshooting',
@@ -64,20 +43,8 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'troubleshooting/common-errors',
-        // 'troubleshooting/performance-issues',
-        // 'troubleshooting/connectivity-problems',
       ],
     },
-    // {
-    //   type: 'doc',
-    //   id: 'faq',
-    //   label: 'FAQ',
-    // },
-    // {
-    //   type: 'doc',
-    //   id: 'changelog',
-    //   label: 'Changelog',
-    // },
   ],
 };
 
