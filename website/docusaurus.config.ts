@@ -28,7 +28,7 @@ const config: Config = {
     // deploymentBranch: 'main',
     trailingSlash: false,
 
-    onBrokenLinks: 'ignore',
+    onBrokenLinks: 'warn',
 
     // Even if you don't use internationalization, you can use this field to set
     // useful metadata like html lang. For example, if your site is Chinese, you
