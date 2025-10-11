@@ -15,37 +15,26 @@ function HomepageHeader() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.welcomeMessage}>
-            <span className={styles.wave}>👋</span> Hello there!
+            <span className={styles.wave}>👋</span> Hello!
           </div>
           <Heading as="h1" className={styles.heroTitle}>
-            Let's make development 
-            <span className={styles.highlight}> delightful</span> together
+            AI Development Assistant
           </Heading>
           <p className={styles.heroSubtitle}>
-            Your friendly AI assistant that helps automate tasks, streamline workflows, 
-            and make your coding experience more enjoyable. Spend less time on repetitive work 
-            and more time creating amazing things.
+            Automate tasks and streamline workflows. 
+            Focus on creating while we handle the routine work.
           </p>
-          <div className={styles.featureIcons}>
-            <div className={styles.featureIcon}>⚡</div>
-            <div className={styles.featureIcon}>🤖</div>
-            <div className={styles.featureIcon}>🎯</div>
-            <div className={styles.featureIcon}>✨</div>
-          </div>
           <div className={styles.buttons}>
             <Link
               className={`button button--primary button--lg ${styles.ctaButton}`}
               to="/docs/intro">
-              Let's Get Started
+              Get Started
             </Link>
             <Link
               className={`button button--secondary button--lg ${styles.secondaryButton}`}
               to="/docs">
-              Learn More
+              Documentation
             </Link>
-          </div>
-          <div className={styles.friendlyNote}>
-            No setup required • Free to try • Designed for developers like you
           </div>
         </div>
       </div>
