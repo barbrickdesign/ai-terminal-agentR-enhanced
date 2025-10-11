@@ -16,33 +16,10 @@ const sidebars: SidebarsConfig = {
         description: 'Get up and running with AI-Terminal quickly.',
       },
       items: [
-        {
-          type: 'category',
-          label: 'Installation',
-          link: {
-            type: 'generated-index',
-            title: 'Installation Guide',
-            description: 'Learn how to install AI-Terminal on your system.',
-          },
-          items: [
-            'installation/system-requirements',
-            'installation/advanced-installation',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Configuration',
-          link: {
-            type: 'generated-index',
-            title: 'Configuration Guide',
-            description: 'Customize AI-Terminal to fit your needs with comprehensive configuration options.',
-          },
-          items: [
-            'configuration/basic-configuration',
-            // 'configuration/model-settings',
-            // 'configuration/advanced-settings',
-          ],
-        },
+        'installation/system-requirements',
+        'installation/advanced-installation',
+        'configuration/basic-configuration',
+        // Add other configuration items directly here if needed
       ],
     },
     {
