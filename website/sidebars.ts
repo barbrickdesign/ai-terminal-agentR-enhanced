@@ -9,16 +9,41 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Installation',
+      label: 'Getting Started',
       link: {
         type: 'generated-index',
-        title: 'Installation Guide',
-        description: 'Learn how to install AI-Terminal on your system.',
+        title: 'Getting Started',
+        description: 'Get up and running with AI-Terminal quickly.',
       },
       items: [
-        'installation/quick-start',
-        'installation/system-requirements',
-        'installation/advanced-installation',
+        {
+          type: 'category',
+          label: 'Installation',
+          link: {
+            type: 'generated-index',
+            title: 'Installation Guide',
+            description: 'Learn how to install AI-Terminal on your system.',
+          },
+          items: [
+            'installation/quick-start',
+            'installation/system-requirements',
+            'installation/advanced-installation',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Configuration',
+          link: {
+            type: 'generated-index',
+            title: 'Configuration Guide',
+            description: 'Customize AI-Terminal to fit your needs with comprehensive configuration options.',
+          },
+          items: [
+            'configuration/basic-configuration',
+            // 'configuration/model-settings',
+            // 'configuration/advanced-settings',
+          ],
+        },
       ],
     },
     {
@@ -36,20 +61,6 @@ const sidebars: SidebarsConfig = {
         // 'usage/command-execution',
         // 'usage/context-management',
         // 'usage/session-management',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Configuration',
-      link: {
-        type: 'generated-index',
-        title: 'Configuration Guide',
-        description: 'Customize AI-Terminal to fit your needs with comprehensive configuration options.',
-      },
-      items: [
-        'configuration/basic-configuration',
-        // 'configuration/model-settings',
-        // 'configuration/advanced-settings',
       ],
     },
     // {
