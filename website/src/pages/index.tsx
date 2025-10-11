@@ -28,13 +28,8 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--primary button--lg"
-            to="/docs/installation">
-            📥 Installation Guide
-          </Link>
-          <Link
-            className="button button--outline button--lg"
-            to="https://github.com/your-username/your-repo">
-            ⭐ Star on GitHub
+            to="/docs">
+            📚 Documentation
           </Link>
         </div>
       </div>
