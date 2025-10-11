@@ -165,10 +165,10 @@ const config: Config = {
                     return [];
                 },
                 redirects: [
-                    {
-                        from: ['/docs/support', '/docs/next/support'],
-                        to: '/community/support',
-                    },
+                    // {
+                        // from: ['/docs/support', '/docs/next/support'],
+                        // to: '/community/support',
+                    // },
                 ],
             } satisfies ClientRedirectsOptions,
         ]
