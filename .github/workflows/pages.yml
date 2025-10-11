@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "ai-terminal/website/**"
+      - "website/**"
       - ".github/workflows/pages.yml"
 
 jobs:
