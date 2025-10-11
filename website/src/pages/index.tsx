@@ -14,11 +14,11 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          AI Development Assistant
+          AI Code Assistant
         </Heading>
         <p className="hero__subtitle">
-          Intelligent code generation, automated refactoring, and context-aware assistance. 
-          Write better code faster, understand complex codebases, and automate development tasks.
+          Generate, refactor, and understand code with AI. 
+          Accelerate development while maintaining quality and best practices.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -46,8 +46,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="AI Development Assistant - Boost Your Productivity"
-      description="AI-powered code generation, intelligent refactoring, and automated development workflows. Enhance your coding experience with our smart development tools.">
+      title="AI Code Assistant - Accelerate Development"
+      description="Generate, refactor, and understand code with AI. Boost productivity while maintaining code quality and best practices.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
