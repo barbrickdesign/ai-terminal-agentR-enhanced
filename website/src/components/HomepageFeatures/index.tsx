@@ -11,83 +11,33 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Cloud and local LLMs',
+    title: 'Intelligent Code Generation',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Aider works best with Claude 3.7 Sonnet, DeepSeek R1 & Chat V3, OpenAI o1, o3-mini & GPT-4o, but can connect to almost any LLM, including local models.
+        Generate high-quality code from natural language descriptions. 
+        Our AI understands your intent and produces production-ready code 
+        across multiple programming languages.
       </>
     ),
   },
   {
-    title: 'Maps your codebase',
+    title: 'Context-Aware Refactoring',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Aider makes a map of your entire codebase, which helps it work well in larger projects.
+        Automatically refactor and improve your codebase with AI that understands 
+        your project's architecture and coding standards.
       </>
     ),
   },
   {
-    title: '100+ code languages',
+    title: 'Automated Development Workflows',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Aider works with most popular programming languages: python, javascript, rust, ruby, go, cpp, php, html, css, and dozens more.
-      </>
-    ),
-  },
-  {
-    title: 'Git integration',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Aider automatically commits changes with sensible commit messages. Use familiar git tools to easily diff, manage and undo AI changes.
-      </>
-    ),
-  },
-  {
-    title: 'In your IDE',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Use aider from within your favorite IDE or editor. Ask for changes by adding comments to your code and aider will get to work.
-      </>
-    ),
-  },
-  {
-    title: 'Images & web pages',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Add images and web pages to the chat to provide visual context, screenshots, reference docs, etc.
-      </>
-    ),
-  },
-  {
-    title: 'Voice-to-code',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Speak with aider about your code! Request new features, test cases or bug fixes using your voice and let aider implement the changes.
-      </>
-    ),
-  },
-  {
-    title: 'Linting & testing',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Automatically lint and test your code every time aider makes changes. Aider can fix problems detected by your linters and test suites.
-      </>
-    ),
-  },
-  {
-    title: 'Copy/paste to web chat',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Aider works best with LLM APIs, but it can also work an LLM via its web chat interface. Aider streamlines copy/pasting code back and forth with a browser.
+        Streamline your development process with automated testing, documentation, 
+        and deployment assistance powered by intelligent AI agents.
       </>
     ),
   },
