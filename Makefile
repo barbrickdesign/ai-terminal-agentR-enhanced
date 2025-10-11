@@ -45,7 +45,7 @@ help: ## Display this help.
 
 .PHONY: chglog
 chglog: git-chglog ## Generate changelog using git-chglog.
-	$(GIT_CHGLOG) -o CHANGELOG.md
+	$(GIT_CHGLOG) -o website/docs/changelog.md
 
 .PHONY: mod-tidy
 mod-tidy: ## Run go mod tidy to clean up dependencies.

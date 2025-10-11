@@ -88,5 +88,5 @@ ai commit --diff-unified 3 --lang zh
 
 查看 [CONTRIBUTING_zh.md](CONTRIBUTING_zh.md) 了解贡献指南。
 
-**更新日志：** [CHANGELOG.md](CHANGELOG.md)  
+**更新日志：** [CHANGELOG.md](website/docs/changelog.md)  
 **许可证：** [MIT](LICENSE) © 2024 coding-hui

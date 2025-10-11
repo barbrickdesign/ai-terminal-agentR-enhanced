@@ -147,7 +147,7 @@ AI-ターミナルの使用例を機能別に紹介します：
 
 ### 変更履歴
 
-プロジェクトの詳細な更新と変更については、[CHANGELOG.md](CHANGELOG.md)をご覧ください。
+プロジェクトの詳細な更新と変更については、[CHANGELOG.md](website/docs/changelog.md)をご覧ください。
 
 ### ライセンス
 

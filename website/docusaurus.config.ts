@@ -1,8 +1,9 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type {Options as ClientRedirectsOptions} from '@docusaurus/plugin-client-redirects';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const defaultLocale = 'en';
 
 const config: Config = {
     title: 'AI-Terminal',
@@ -43,10 +44,13 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
-                    // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/coding-hui/ai-terminal/tree/main/website/',
+                    // editUrl: 'https://github.com/coding-hui/ai-terminal/tree/main/website/',
+                    editUrl: ({locale, docPath}) => {
+                        return `https://github.com/coding-hui/ai-terminal/tree/main/website/docs/${docPath}`;
+                    },
+                    showLastUpdateAuthor: true,
+                    showLastUpdateTime: true,
                 },
                 blog: {
                     showReadingTime: true,
@@ -56,8 +60,7 @@ const config: Config = {
                     },
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/coding-hui/ai-terminal/tree/main/website/',
+                    editUrl: 'https://github.com/coding-hui/ai-terminal/tree/main/website/',
                     // Useful options to enforce blogging best practices
                     onInlineTags: 'warn',
                     onInlineAuthors: 'warn',
@@ -84,9 +87,9 @@ const config: Config = {
             },
             items: [
                 {
-                    type: 'docSidebar',
-                    sidebarId: 'docsSidebar',
+                    type: 'doc',
                     position: 'left',
+                    docId: 'intro',
                     label: 'Documentation',
                 },
                 // {to: '/blog', label: 'Blog', position: 'left'},
@@ -147,6 +150,28 @@ const config: Config = {
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
+
+    plugins: [
+        [
+            'client-redirects',
+            {
+                fromExtensions: ['html'],
+                createRedirects(routePath) {
+                    // Redirect to /docs from /docs/introduction (now docs root doc)
+                    if (routePath === '/docs' || routePath === '/docs/') {
+                        return [`${routePath}/intro`];
+                    }
+                    return [];
+                },
+                redirects: [
+                    {
+                        from: ['/docs/support', '/docs/next/support'],
+                        to: '/community/support',
+                    },
+                ],
+            } satisfies ClientRedirectsOptions,
+        ]
+    ]
 };
 
 export default config;
