@@ -14,13 +14,11 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          AI-Powered Development Assistant
+          AI Development Assistant
         </Heading>
         <p className="hero__subtitle">
-          Transform your development workflow with intelligent code generation, 
-          automated refactoring, and context-aware assistance. Our AI tools help 
-          you write better code faster, understand complex codebases, and automate 
-          repetitive tasks.
+          Intelligent code generation, automated refactoring, and context-aware assistance. 
+          Write better code faster, understand complex codebases, and automate development tasks.
         </p>
         <div className={styles.buttons}>
           <Link
