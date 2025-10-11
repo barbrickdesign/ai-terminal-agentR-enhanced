@@ -93,6 +93,7 @@ const config: Config = {
                     label: 'Documentation',
                 },
                 // {to: '/blog', label: 'Blog', position: 'left'},
+                // right
                 {
                     href: 'https://github.com/coding-hui/ai-terminal',
                     label: 'GitHub',
