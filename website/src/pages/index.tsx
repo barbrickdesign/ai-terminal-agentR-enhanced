@@ -14,9 +14,6 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <div className={styles.heroContent}>
-          <div className={styles.welcomeMessage}>
-            <span className={styles.wave}>👋</span> Hello!
-          </div>
           <Heading as="h1" className={styles.heroTitle}>
             AI Development Assistant
           </Heading>

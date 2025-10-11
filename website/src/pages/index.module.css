@@ -18,22 +18,6 @@
   padding: 1rem;
 }
 
-.welcomeMessage {
-  font-size: 1rem;
-  color: #718096;
-  margin-bottom: 1rem;
-}
-
-.wave {
-  animation: wave 2s infinite;
-}
-
-@keyframes wave {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(10deg); }
-  75% { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
-}
 
 .heroTitle {
   font-size: 2.5rem;
