@@ -1,0 +1,18 @@
+{
+  "data": {
+    "arguments": [
+      "arg1",
+      123,
+      true
+    ],
+    "function": "TestFunction",
+    "type": "function_entry"
+  },
+  "timestamp": "2026-02-21T16:48:02.133588493Z"
+}{
+  "data": {
+    "function": "TestFunction",
+    "type": "function_exit"
+  },
+  "timestamp": "2026-02-21T16:48:02.133655609Z"
+}
