@@ -1,3 +1,7 @@
+# Debug output files
+internal/util/debug/*.json
+internal/util/debug/log_counter.txt
+
 # Binaries for programs and plugins
 *.exe
 *.exe~

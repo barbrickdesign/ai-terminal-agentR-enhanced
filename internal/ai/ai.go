@@ -179,7 +179,7 @@ func (e *Engine) setupChatContext(ctx context.Context, messages *[]llms.ChatMess
 				console.StderrStyles().InlineCode.Render("NO_CACHE"),
 			), err)
 		}
-		*messages = append(*messages, history...)
+		*messages = append(history, *messages...)
 	}
 
 	return nil

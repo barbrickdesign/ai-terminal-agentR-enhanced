@@ -90,19 +90,11 @@ func GetDistribution() string {
 }
 
 func GetShell() string {
-	var (
-		shell           string
-		err             error
-		operatingSystem = GetOperatingSystem()
-	)
-
-	if operatingSystem == WindowsOperatingSystem {
-		shell, err = runner.Run("echo", os.Getenv("COMSPEC"))
+	var shell string
+	if GetOperatingSystem() == WindowsOperatingSystem {
+		shell = os.Getenv("COMSPEC")
 	} else {
-		shell, err = runner.Run("echo", os.Getenv("SHELL"))
-	}
-	if err != nil {
-		return ""
+		shell = os.Getenv("SHELL")
 	}
 
 	shell = strings.TrimSpace(shell)     // Trims all leading and trailing white spaces
