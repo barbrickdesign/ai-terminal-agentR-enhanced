@@ -20,18 +20,22 @@ const (
 	maxContentSizeInMB = 10
 )
 
-func FetchURLContent(url string) (string, error) {
-	client := &http.Client{
-		Timeout: httpTimeout,
-		CheckRedirect: func(req *http.Request, via []*http.Request) error {
-			if len(via) >= maxRedirections {
-				return errbook.New("stopped after too many redirects")
-			}
-			return nil
-		},
+// maxRedirectsPolicy is a named redirect policy used by defaultHTTPClient.
+func maxRedirectsPolicy(req *http.Request, via []*http.Request) error {
+	if len(via) >= maxRedirections {
+		return errbook.New("stopped after too many redirects")
 	}
+	return nil
+}
 
-	resp, err := client.Get(url)
+// defaultHTTPClient is a shared client reused across requests for connection pooling.
+var defaultHTTPClient = &http.Client{
+	Timeout:       httpTimeout,
+	CheckRedirect: maxRedirectsPolicy,
+}
+
+func FetchURLContent(url string) (string, error) {
+	resp, err := defaultHTTPClient.Get(url) //nolint:noctx
 	if err != nil {
 		return "", err
 	}

@@ -11,6 +11,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
 
 	"github.com/coding-hui/common/util/fileutil"
 	"github.com/coding-hui/wecoding-sdk-go/services/ai/llms"
@@ -766,22 +767,47 @@ func (c *CommandExecutor) prepareAskCompletionMessages(userInput string) ([]llms
 }
 
 func (c *CommandExecutor) getAddedFileContent() (string, error) {
-	addedFiles := ""
-	if len(c.coder.loadedContexts) > 0 {
-		for _, lc := range c.coder.loadedContexts {
+	if len(c.coder.loadedContexts) == 0 {
+		return "", nil
+	}
+
+	type result struct {
+		content string
+		err     error
+	}
+
+	const maxConcurrent = 8
+	sem := make(chan struct{}, maxConcurrent)
+
+	results := make([]result, len(c.coder.loadedContexts))
+	var wg sync.WaitGroup
+
+	for i, lc := range c.coder.loadedContexts {
+		wg.Add(1)
+		go func(idx int, lc *convo.LoadContext) {
+			defer wg.Done()
+			sem <- struct{}{}
+			defer func() { <-sem }()
 			filePath := lc.FilePath
 			if lc.Type == convo.ContentTypeURL {
 				filePath = lc.URL
 			}
 			content, err := c.formatFileContent(filePath)
-			if err != nil {
-				return "", err
-			}
-			addedFiles += content
-		}
+			results[idx] = result{content: content, err: err}
+		}(i, lc)
 	}
 
-	return addedFiles, nil
+	wg.Wait()
+
+	var sb strings.Builder
+	for _, r := range results {
+		if r.err != nil {
+			return "", r.err
+		}
+		sb.WriteString(r.content)
+	}
+
+	return sb.String(), nil
 }
 
 func (c *CommandExecutor) formatFileContent(filePath string) (string, error) {
